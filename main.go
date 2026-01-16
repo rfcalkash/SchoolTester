@@ -328,6 +328,7 @@ func main() {
 	http.HandleFunc("/api/tests/", corsMiddleware(getTestByIDHandler))
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Printf("Received request for %s\n", r.URL.Path)
 		// If the path is exactly "/" or "/index.html", serve the file
 		if r.URL.Path == "/" || r.URL.Path == "/index.html" {
 			http.ServeFile(w, r, "index.html")
