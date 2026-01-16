@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Testing System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .breadcrumb-item {
+            cursor: pointer;
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .breadcrumb-item:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb-separator {
+            color: #999;
+        }
+
+        .categories-view,
+        .test-list,
+        .test-view,
+        .results-view {
+            display: none;
+        }
+
+        .categories-view.active,
+        .test-list.active,
+        .test-view.active,
+        .results-view.active {
+            display: block;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .category-card {
+            padding: 25px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+            background: #fafafa;
+        }
+
+        .category-card:hover {
+            border-color: #667eea;
+            transform: translateY(-4px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+            background: white;
+        }
+
+        .category-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 15px;
+        }
+
+        .category-card h3 {
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 1.2em;
+        }
+
+        .category-card p {
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+        .test-item {
+            padding: 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .test-icon {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+        }
+
+        .test-content {
+            flex: 1;
+        }
+
+        .test-item:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .test-item h3 {
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .test-item p {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.4;
+        }
+
+        .test-meta {
+            font-size: 0.85em;
+            color: #999;
+            margin-top: 10px;
+        }
+
+        .question {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .question h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .answer-option {
+            display: block;
+            padding: 12px;
+            margin: 8px 0;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .answer-option:hover {
+            border-color: #667eea;
+        }
+
+        .answer-option input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .text-answer {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 1em;
+        }
+
+        .text-answer:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+            margin-left: 10px;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+
+        .buttons {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .score {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .score-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        .result-item {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 6px;
+        }
+
+        .result-correct {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+        }
+
+        .result-incorrect {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+        }
+
+        .result-item strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .error {
+            color: #dc3545;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+        }
+
+        .empty-state-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Student Testing System</h1>
+            <p>Choose a category and demonstrate your knowledge</p>
+        </div>
+
+        <div class="card">
+            <div id="categoriesView" class="categories-view active">
+                <div class="breadcrumb" id="categoryBreadcrumb"></div>
+                <h2 id="categoryTitle" style="margin-bottom: 20px;">Categories</h2>
+                <div id="categoriesContainer" class="loading">
+                    Loading categories...
+                </div>
+            </div>
+
+            <div id="testList" class="test-list">
+                <div class="breadcrumb" id="testBreadcrumb"></div>
+                <h2 id="testListTitle" style="margin-bottom: 20px;">Available Tests</h2>
+                <div id="testsContainer"></div>
+            </div>
+
+            <div id="testView" class="test-view">
+                <h2 id="testTitle" style="margin-bottom: 10px;"></h2>
+                <p id="testDescription" style="color: #666; margin-bottom: 30px;"></p>
+                <div id="questionsContainer"></div>
+                <div class="buttons">
+                    <button class="btn btn-primary" onclick="submitTest()">Submit Test</button>
+                    <button class="btn btn-secondary" onclick="backToTestList()">Cancel</button>
+                </div>
+            </div>
+
+            <div id="resultsView" class="results-view">
+                <div class="score">
+                    <div class="score-circle" id="scoreCircle">0%</div>
+                    <h2 id="scoreText"></h2>
+                </div>
+                <div id="resultsContainer"></div>
+                <div class="buttons">
+                    <button class="btn btn-primary" onclick="backToTestList()">Back to Tests</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:8080/api';
+        let currentTest = null;
+        let userAnswers = {};
+        let currentCategory = null;
+        let categories = [];
+
+        async function loadCategories() {
+            try {
+                const response = await fetch(`${API_URL}/categories`);
+                categories = await response.json();
+                showCategory(0);
+            } catch (error) {
+                document.getElementById('categoriesContainer').innerHTML = 
+                    '<p class="error">Error loading categories. Make sure the server is running.</p>';
+                console.error('Error:', error);
+            }
+        }
+
+        function showCategory(categoryId) {
+            currentCategory = categories.find(c => c.id === categoryId);
+            if (!currentCategory) return;
+
+            const subcategories = categories.filter(c => c.parent_id === categoryId);
+            
+            updateBreadcrumb(categoryId, 'category');
+
+            document.getElementById('categoryTitle').textContent = currentCategory.category;
+
+            const container = document.getElementById('categoriesContainer');
+            
+            if (subcategories.length === 0) {
+                loadTestsForCategory(categoryId);
+                return;
+            }
+
+            container.innerHTML = `
+                <div class="category-grid">
+                    ${subcategories.map(cat => `
+                        <div class="category-card" onclick="showCategory(${cat.id})">
+                            <img src="${cat.icon}" alt="${cat.category}" class="category-icon" 
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2264%22 height=%2264%22%3E%3Crect fill=%22%23667eea%22 width=%2264%22 height=%2264%22 rx=%228%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2232%22%3E📁%3C/text%3E%3C/svg%3E'">
+                            <h3>${cat.category}</h3>
+                            <p>${cat.description}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+
+            loadTestsForCategory(categoryId, true);
+
+            showView('categoriesView');
+        }
+
+        async function loadTestsForCategory(categoryId, showInline = false) {
+            try {
+                const response = await fetch(`${API_URL}/tests?category_id=${categoryId}`);
+                const tests = await response.json();
+
+                if (tests.length === 0 && !showInline) {
+                    document.getElementById('categoriesContainer').innerHTML = `
+                        <div class="empty-state">
+                            <div class="empty-state-icon">📝</div>
+                            <h3>No tests available</h3>
+                            <p>This category doesn't contain any tests yet.</p>
+                            <button class="btn btn-secondary" onclick="showCategory(${currentCategory.parent_id})" 
+                                    style="margin-top: 20px;">Back to Categories</button>
+                        </div>
+                    `;
+                    return;
+                }
+
+                const testsHTML = tests.length > 0 ? `
+                    <h3 style="margin: 30px 0 15px 0; color: #333;">Tests in this category</h3>
+                    ${tests.map(test => `
+                        <div class="test-item" onclick="loadTest(${test.id})">
+                            <img src="${test.iconURL || ''}" alt="${test.name}" class="test-icon"
+                                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22%3E%3Crect fill=%22%23667eea%22 width=%2248%22 height=%2248%22 rx=%226%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2224%22%3E📝%3C/text%3E%3C/svg%3E'">
+                            <div class="test-content">
+                                <h3>${test.name}</h3>
+                                <p>${test.description}</p>
+                                <div class="test-meta">
+                                    Created: ${new Date(test.created_at).toLocaleDateString()}
+                                </div>
+                            </div>
+                        </div>
+                    `).join('')}
+                ` : '';
+
+                if (showInline) {
+                    const container = document.getElementById('categoriesContainer');
+                    container.innerHTML += testsHTML;
+                } else {
+                    document.getElementById('testsContainer').innerHTML = testsHTML || 
+                        '<p class="empty-state">No tests in this category</p>';
+                    updateBreadcrumb(categoryId, 'tests');
+                    showView('testList');
+                }
+            } catch (error) {
+                console.error('Error loading tests:', error);
+            }
+        }
+
+        function updateBreadcrumb(categoryId, view) {
+            const breadcrumbId = view === 'category' ? 'categoryBreadcrumb' : 'testBreadcrumb';
+            const breadcrumb = document.getElementById(breadcrumbId);
+            
+            const path = [];
+            let cat = categories.find(c => c.id === categoryId);
+            
+            while (cat) {
+                path.unshift(cat);
+                cat = categories.find(c => c.id === cat.parent_id);
+            }
+
+            breadcrumb.innerHTML = path.map((c, idx) => `
+                <span class="breadcrumb-item" onclick="showCategory(${c.id})">${c.category}</span>
+                ${idx < path.length - 1 ? '<span class="breadcrumb-separator">›</span>' : ''}
+            `).join('');
+        }
+
+        async function loadTest(id) {
+            try {
+                const response = await fetch(`${API_URL}/tests/${id}`);
+                currentTest = await response.json();
+                userAnswers = {};
+
+                document.getElementById('testTitle').textContent = currentTest.name;
+                document.getElementById('testDescription').textContent = currentTest.description;
+
+                const container = document.getElementById('questionsContainer');
+                container.innerHTML = currentTest.questions.map((q, idx) => {
+                    if (currentTest.type === 0) {
+                        return `
+                            <div class="question">
+                                <h3>Question ${idx + 1}</h3>
+                                <p>${q.question}</p>
+                                ${q.answersList.map((answer, ansIdx) => `
+                                    <label class="answer-option">
+                                        <input type="radio" name="q${idx}" value="${ansIdx}" 
+                                               onchange="setAnswer(${idx}, ${ansIdx})">
+                                        ${answer}
+                                    </label>
+                                `).join('')}
+                            </div>
+                        `;
+                    } else {
+                        return `
+                            <div class="question">
+                                <h3>Question ${idx + 1}</h3>
+                                <p>${q.question}</p>
+                                <input type="text" class="text-answer" 
+                                       placeholder="Enter your answer" 
+                                       onchange="setAnswer(${idx}, this.value)">
+                            </div>
+                        `;
+                    }
+                }).join('');
+
+                showView('testView');
+            } catch (error) {
+                alert('Error loading test\n'+error.message);
+                console.error('Error:', error);
+            }
+        }
+
+        function setAnswer(questionIdx, answer) {
+            userAnswers[questionIdx] = answer;
+        }
+
+        function submitTest() {
+            if (Object.keys(userAnswers).length < currentTest.questions.length) {
+                if (!confirm('You haven\'t answered all questions. Submit anyway?')) {
+                    return;
+                }
+            }
+
+            let correct = 0;
+            const results = currentTest.questions.map((q, idx) => {
+                const userAnswer = userAnswers[idx];
+                let isCorrect = false;
+
+                if (currentTest.type === 0) {
+                    isCorrect = userAnswer === q.correctAnswer;
+                } else {
+                    isCorrect = userAnswer && 
+                        userAnswer.toLowerCase().trim() === 
+                        String(q.correctAnswer).toLowerCase().trim();
+                }
+
+                if (isCorrect) correct++;
+
+                return {
+                    question: q.question,
+                    userAnswer: currentTest.type === 0 ? 
+                        (userAnswer !== undefined ? q.answersList[userAnswer] : 'Not answered') : 
+                        (userAnswer || 'Not answered'),
+                    correctAnswer: currentTest.type === 0 ? 
+                        q.answersList[q.correctAnswer] : 
+                        q.correctAnswer,
+                    isCorrect
+                };
+            });
+
+            displayResults(correct, currentTest.questions.length, results);
+        }
+
+        function displayResults(correct, total, results) {
+            const percentage = Math.round((correct / total) * 100);
+            
+            document.getElementById('scoreCircle').textContent = `${percentage}%`;
+            document.getElementById('scoreText').textContent = 
+                `You scored ${correct} out of ${total}`;
+
+            const container = document.getElementById('resultsContainer');
+            container.innerHTML = results.map((r, idx) => `
+                <div class="result-item ${r.isCorrect ? 'result-correct' : 'result-incorrect'}">
+                    <strong>Question ${idx + 1}: ${r.question}</strong>
+                    <div>Your answer: ${r.userAnswer}</div>
+                    ${!r.isCorrect ? `<div>Correct answer: ${r.correctAnswer}</div>` : ''}
+                </div>
+            `).join('');
+
+            showView('resultsView');
+        }
+
+        function backToTestList() {
+            if (currentCategory) {
+                showCategory(currentCategory.id);
+            }
+        }
+
+        function showView(viewId) {
+            document.getElementById('categoriesView').classList.remove('active');
+            document.getElementById('testList').classList.remove('active');
+            document.getElementById('testView').classList.remove('active');
+            document.getElementById('resultsView').classList.remove('active');
+            document.getElementById(viewId).classList.add('active');
+        }
+
+        loadCategories();
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "World Geography",
+  "description": "Answer questions about countries and capitals",
+  "type": 1,
+  "iconURL": "https://cdn-icons-png.flaticon.com/512/854/854878.png",
+  "questions": [
+    {
+      "question": "What is the capital of France?",
+      "correctAnswer": "Paris"
+    },
+    {
+      "question": "What is the largest country by area?",
+      "correctAnswer": "Russia"
+    },
+    {
+      "question": "What ocean is between Europe and North America?",
+      "correctAnswer": "Atlantic"
+    },
+    {
+      "question": "What is the capital of Japan?",
+      "correctAnswer": "Tokyo"
+    }
+  ]
+}

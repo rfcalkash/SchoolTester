@@ -1,0 +1,28 @@
+{
+  "name": "Basic Mathematics",
+  "description": "Test your knowledge of fundamental math concepts",
+  "type": 0,
+  "iconURL": "https://cdn-icons-png.flaticon.com/512/3830/3830923.png",
+  "questions": [
+    {
+      "question": "What is 15 + 27?",
+      "answersList": ["40", "42", "43", "45"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "What is the square root of 64?",
+      "answersList": ["6", "7", "8", "9"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is 12 × 8?",
+      "answersList": ["84", "92", "96", "104"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "What is 100 ÷ 4?",
+      "answersList": ["20", "24", "25", "30"],
+      "correctAnswer": 2
+    }
+  ]
+}
