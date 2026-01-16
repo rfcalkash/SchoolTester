@@ -1,0 +1,68 @@
+{
+  "name": "Математика 4 класс (Ввод ответов)",
+  "description": "Реши примеры на сложение, вычитание, умножение и деление. Вводи ответ цифрами.",
+  "type": 1,
+  "iconURL": "https://cdn-icons-png.flaticon.com/512/854/854878.png",
+  "questions": [
+    {
+      "question": "Вычислите: 245 + 132",
+      "correctAnswer": "377"
+    },
+    {
+      "question": "Найдите разность чисел 890 и 450",
+      "correctAnswer": "440"
+    },
+    {
+      "question": "Чему равно произведение 16 и 4?",
+      "correctAnswer": "64"
+    },
+    {
+      "question": "Разделите 72 на 3",
+      "correctAnswer": "24"
+    },
+    {
+      "question": "Вычислите: 600 - 125",
+      "correctAnswer": "475"
+    },
+    {
+      "question": "Сколько будет 23 умножить на 3?",
+      "correctAnswer": "69"
+    },
+    {
+      "question": "Найдите частное чисел 96 и 6",
+      "correctAnswer": "16"
+    },
+    {
+      "question": "Сложите 567 и 233",
+      "correctAnswer": "800"
+    },
+    {
+      "question": "Вычислите: 15 * 6",
+      "correctAnswer": "90"
+    },
+    {
+      "question": "Найдите остаток, если из 1000 вычесть 350",
+      "correctAnswer": "650"
+    },
+    {
+      "question": "Разделите 84 на 4",
+      "correctAnswer": "21"
+    },
+    {
+      "question": "Чему равна сумма 418 и 72?",
+      "correctAnswer": "490"
+    },
+    {
+      "question": "Вычислите: 12 * 8",
+      "correctAnswer": "96"
+    },
+    {
+      "question": "Разделите 55 на 5",
+      "correctAnswer": "11"
+    },
+    {
+      "question": "Вычислите: 742 - 242",
+      "correctAnswer": "500"
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "name": "Математика 4 класс: Базовые навыки",
+  "description": "Тест на проверку навыков сложения, вычитания, умножения и деления для учащихся 4 класса.",
+  "type": 0,
+  "iconURL": "https://cdn-icons-png.flaticon.com/512/3830/3830923.png",
+  "questions": [
+    {
+      "question": "Вычислите: 145 + 234",
+      "answersList": ["379", "389", "369", "370"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Найдите разность: 567 - 123",
+      "answersList": ["440", "434", "444", "454"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Чему равно произведение: 12 * 4?",
+      "answersList": ["36", "44", "48", "52"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Разделите нацело: 72 / 8",
+      "answersList": ["7", "8", "9", "6"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Сумма чисел 350 и 450 равна:",
+      "answersList": ["700", "800", "750", "900"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Вычтите: 900 - 450",
+      "answersList": ["450", "550", "400", "350"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Умножьте: 15 * 3",
+      "answersList": ["35", "40", "45", "50"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Частное чисел 56 и 7 равно:",
+      "answersList": ["6", "9", "8", "7"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Сложите: 128 + 62",
+      "answersList": ["180", "190", "200", "170"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Вычислите: 843 - 210",
+      "answersList": ["633", "623", "643", "533"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Сколько будет: 25 * 2?",
+      "answersList": ["40", "50", "60", "45"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Результат деления 48 / 6:",
+      "answersList": ["7", "8", "6", "9"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Найдите сумму: 215 + 175",
+      "answersList": ["380", "390", "400", "370"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Вычислите: 750 - 300",
+      "answersList": ["400", "500", "450", "350"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Умножьте: 11 * 9",
+      "answersList": ["88", "99", "110", "90"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Разделите: 81 / 9",
+      "answersList": ["7", "8", "9", "10"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Сложите числа: 412 + 88",
+      "answersList": ["490", "500", "510", "480"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Найдите разность: 654 - 231",
+      "answersList": ["423", "433", "413", "420"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Сколько будет: 14 * 5?",
+      "answersList": ["60", "75", "70", "80"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Чему равно частное 63 / 9?",
+      "answersList": ["6", "7", "8", "9"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Вычислите: 333 + 222",
+      "answersList": ["555", "556", "444", "666"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Разность чисел 1000 и 250:",
+      "answersList": ["850", "750", "650", "700"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Умножьте: 18 * 2",
+      "answersList": ["32", "34", "36", "38"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Результат деления 54 / 6:",
+      "answersList": ["8", "7", "9", "6"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Сложите: 567 + 33",
+      "answersList": ["590", "600", "610", "580"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Вычтите: 489 - 189",
+      "answersList": ["200", "350", "300", "400"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Произведение 21 * 4 равно:",
+      "answersList": ["84", "82", "86", "88"],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Разделите: 42 / 7",
+      "answersList": ["5", "6", "7", "8"],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Чему равно: 125 + 125?",
+      "answersList": ["240", "260", "250", "300"],
+      "correctAnswer": 2
+    },
+    {
+      "question": "Вычислите: 96 / 3",
+      "answersList": ["31", "33", "32", "30"],
+      "correctAnswer": 2
+    }
+  ]
+}
