@@ -325,11 +325,19 @@ func main() {
 		}
 	}))
 
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, "index.html")
-	})
-
 	http.HandleFunc("/api/tests/", corsMiddleware(getTestByIDHandler))
+
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		// If the path is exactly "/" or "/index.html", serve the file
+		if r.URL.Path == "/" || r.URL.Path == "/index.html" {
+			http.ServeFile(w, r, "index.html")
+			return
+		}
+
+		// If it's anything else (and it reached here), it's a 404
+		// This prevents the API from returning index.html by mistake
+		http.NotFound(w, r)
+	})
 
 	port := "8080"
 	// fmt.Printf("Server starting on http://localhost:%s\n", port)
