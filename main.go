@@ -325,12 +325,14 @@ func main() {
 		}
 	}))
 
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "index.html")
+	})
+
 	http.HandleFunc("/api/tests/", corsMiddleware(getTestByIDHandler))
 
-	http.Handle("/", http.FileServer(http.Dir("./static")))
-
 	port := "8080"
-	fmt.Printf("Server starting on http://localhost:%s\n", port)
+	// fmt.Printf("Server starting on http://localhost:%s\n", port)
 	fmt.Printf("Categories loaded: %d\n", len(categories))
 	fmt.Printf("Tests loaded: %d\n", len(tests))
 	log.Fatal(http.ListenAndServe(":"+port, nil))
