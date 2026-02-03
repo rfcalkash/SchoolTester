@@ -2,256 +2,506 @@
   "name": "English Adjectives: Degrees of Comparison",
   "description": "Тест на знание степеней сравнения в английском языке: правила, правописание и исключения.",
   "type": 0,
-  "iconURL": "https://cdn-icons-png.flaticon.com/512/3830/3830923.png",
+  "iconURL": "https://images.vexels.com/media/users/3/188652/isolated/preview/aa91bfaa4b327ef61e29f4ae40378a6e-two-color-pencil-school-4th-grade-icon.png",
   "questions": [
     {
       "question": "Выберите сравнительную степень прилагательного 'fast':",
-      "answersList": ["fasten", "faster", "fastest", "more fast"],
+      "answersList": [
+        "fasten",
+        "faster",
+        "fastest",
+        "more fast"
+      ],
       "correctAnswer": 1
     },
     {
       "question": "Выберите превосходную степень прилагательного 'big':",
-      "answersList": ["bigger", "biger", "biggest", "the most big"],
+      "answersList": [
+        "bigger",
+        "biger",
+        "biggest",
+        "the most big"
+      ],
       "correctAnswer": 2
     },
     {
       "question": "Какая сравнительная степень у слова 'good'?",
-      "answersList": ["gooder", "more good", "best", "better"],
+      "answersList": [
+        "gooder",
+        "more good",
+        "best",
+        "better"
+      ],
       "correctAnswer": 3
     },
     {
       "question": "Какая превосходная степень у слова 'bad'?",
-      "answersList": ["worse", "worst", "baddest", "most bad"],
+      "answersList": [
+        "worse",
+        "worst",
+        "baddest",
+        "most bad"
+      ],
       "correctAnswer": 1
     },
     {
       "question": "Выберите правильную форму: 'This book is ... than that one.'",
-      "answersList": ["interestinger", "more interesting", "most interesting", "the interestingest"],
+      "answersList": [
+        "interestinger",
+        "more interesting",
+        "most interesting",
+        "the interestingest"
+      ],
       "correctAnswer": 1
     },
     {
       "question": "Как правильно пишется сравнительная степень 'heavy'?",
-      "answersList": ["heavyer", "heavier", "more heavy", "heavyest"],
+      "answersList": [
+        "heavyer",
+        "heavier",
+        "more heavy",
+        "heavyest"
+      ],
       "correctAnswer": 1
     },
     {
       "question": "Выберите превосходную степень слова 'happy':",
-      "answersList": ["the happiest", "the happyest", "most happy", "happier"],
+      "answersList": [
+        "the happiest",
+        "the happyest",
+        "most happy",
+        "happier"
+      ],
       "correctAnswer": 0
     },
     {
       "question": "Сравнительная степень слова 'little' (в значении 'мало'):",
-      "answersList": ["littler", "smaller", "less", "least"],
+      "answersList": [
+        "littler",
+        "smaller",
+        "less",
+        "least"
+      ],
       "correctAnswer": 2
     },
     {
       "question": "Превосходная степень слова 'far' (в значении расстояния):",
-      "answersList": ["farthest", "farest", "most far", "further"],
+      "answersList": [
+        "farthest",
+        "farest",
+        "most far",
+        "further"
+      ],
       "correctAnswer": 0
     },
     {
       "question": "Выберите правильную форму: 'She is the ... girl in our class.'",
-      "answersList": ["smart", "smarter", "smartest", "most smart"],
+      "answersList": [
+        "smart",
+        "smarter",
+        "smartest",
+        "most smart"
+      ],
       "correctAnswer": 2
     },
     {
       "question": "Сравнительная степень слова 'expensive':",
-      "answersList": ["expensiver", "more expensive", "most expensive", "the expensivest"],
+      "answersList": [
+        "expensiver",
+        "more expensive",
+        "most expensive",
+        "the expensivest"
+      ],
       "correctAnswer": 1
     },
     {
       "question": "Как правильно образовать превосходную степень от 'hot'?",
-      "answersList": ["hotest", "hottest", "most hot", "hotter"],
+      "answersList": [
+        "hotest",
+        "hottest",
+        "most hot",
+        "hotter"
+      ],
       "correctAnswer": 1
     },
     {
       "question": "Какое из этих слов является исключением?",
-      "answersList": ["tall", "many", "cheap", "cold"],
+      "answersList": [
+        "tall",
+        "many",
+        "cheap",
+        "cold"
+      ],
       "correctAnswer": 1
     },
     {
       "question": "Сравнительная степень 'many/much':",
-      "answersList": ["mucher", "more", "most", "manyer"],
+      "answersList": [
+        "mucher",
+        "more",
+        "most",
+        "manyer"
+      ],
       "correctAnswer": 1
     },
     {
       "question": "Превосходная степень 'old' (говоря о старшинстве в семье):",
-      "answersList": ["oldest", "eldest", "most old", "elder"],
+      "answersList": [
+        "oldest",
+        "eldest",
+        "most old",
+        "elder"
+      ],
       "correctAnswer": 1
     },
     {
       "question": "Выберите правильную форму: 'It was the ... day of my life.'",
-      "answersList": ["bad", "worse", "worst", "baddest"],
+      "answersList": [
+        "bad",
+        "worse",
+        "worst",
+        "baddest"
+      ],
       "correctAnswer": 2
     },
     {
       "question": "Сравнительная степень 'narrow':",
-      "answersList": ["narrower", "more narrow", "both are correct", "narrowest"],
+      "answersList": [
+        "narrower",
+        "more narrow",
+        "both are correct",
+        "narrowest"
+      ],
       "correctAnswer": 2
     },
     {
       "question": "Превосходная степень 'difficult':",
-      "answersList": ["difficulter", "more difficult", "the most difficult", "the difficultest"],
+      "answersList": [
+        "difficulter",
+        "more difficult",
+        "the most difficult",
+        "the difficultest"
+      ],
       "correctAnswer": 2
     },
     {
       "question": "Сравнительная степень 'clever':",
-      "answersList": ["cleverer", "more clever", "both are correct", "cleverest"],
+      "answersList": [
+        "cleverer",
+        "more clever",
+        "both are correct",
+        "cleverest"
+      ],
       "correctAnswer": 2
     },
     {
       "question": "Сравнительная степень слова 'far' (в значении 'дальнейший/добавочный'):",
-      "answersList": ["farther", "further", "more far", "farthest"],
+      "answersList": [
+        "farther",
+        "further",
+        "more far",
+        "farthest"
+      ],
       "correctAnswer": 1
     },
     {
       "question": "Превосходная степень слова 'thin':",
-      "answersList": ["thinest", "thinnest", "most thin", "thiner"],
+      "answersList": [
+        "thinest",
+        "thinnest",
+        "most thin",
+        "thiner"
+      ],
       "correctAnswer": 1
     },
     {
       "question": "Выберите правильный вариант: 'Gold is ... than silver.'",
-      "answersList": ["heavyer", "more heavy", "heavier", "the heaviest"],
+      "answersList": [
+        "heavyer",
+        "more heavy",
+        "heavier",
+        "the heaviest"
+      ],
       "correctAnswer": 2
     },
     {
       "question": "Какая форма превосходной степени у 'useful'?",
-      "answersList": ["usefulest", "the most useful", "more useful", "the usefullest"],
+      "answersList": [
+        "usefulest",
+        "the most useful",
+        "more useful",
+        "the usefullest"
+      ],
       "correctAnswer": 1
     },
     {
       "question": "Сравнительная степень 'dirty':",
-      "answersList": ["dirtier", "dirtyer", "more dirty", "the dirtiest"],
+      "answersList": [
+        "dirtier",
+        "dirtyer",
+        "more dirty",
+        "the dirtiest"
+      ],
       "correctAnswer": 0
     },
     {
       "question": "Превосходная степень 'cheap':",
-      "answersList": ["cheapest", "cheapper", "the most cheap", "cheapier"],
+      "answersList": [
+        "cheapest",
+        "cheapper",
+        "the most cheap",
+        "cheapier"
+      ],
       "correctAnswer": 0
     },
     {
       "question": "Сравнительная степень 'simple':",
-      "answersList": ["simpler", "more simple", "both are correct", "simplest"],
+      "answersList": [
+        "simpler",
+        "more simple",
+        "both are correct",
+        "simplest"
+      ],
       "correctAnswer": 2
     },
     {
       "question": "Превосходная степень 'lazy':",
-      "answersList": ["lazyest", "laziest", "most lazy", "the lazyest"],
+      "answersList": [
+        "lazyest",
+        "laziest",
+        "most lazy",
+        "the lazyest"
+      ],
       "correctAnswer": 1
     },
     {
       "question": "Выберите правильную форму: 'This is the ... movie I have ever seen.'",
-      "answersList": ["boringer", "more boring", "most boring", "the boringest"],
+      "answersList": [
+        "boringer",
+        "more boring",
+        "most boring",
+        "the boringest"
+      ],
       "correctAnswer": 2
     },
     {
       "question": "Сравнительная степень 'late' (о времени):",
-      "answersList": ["later", "latter", "latest", "more late"],
+      "answersList": [
+        "later",
+        "latter",
+        "latest",
+        "more late"
+      ],
       "correctAnswer": 0
     },
     {
       "question": "Форма 'latter' означает:",
-      "answersList": ["Поздний по времени", "Последний из двух упомянутых", "Самый поздний", "Более далекий"],
+      "answersList": [
+        "Поздний по времени",
+        "Последний из двух упомянутых",
+        "Самый поздний",
+        "Более далекий"
+      ],
       "correctAnswer": 1
     },
     {
       "question": "Превосходная степень 'few':",
-      "answersList": ["fewest", "least", "most few", "fewer"],
+      "answersList": [
+        "fewest",
+        "least",
+        "most few",
+        "fewer"
+      ],
       "correctAnswer": 0
     },
     {
       "question": "Сравнительная степень 'wet':",
-      "answersList": ["weter", "wetter", "more wet", "wettest"],
+      "answersList": [
+        "weter",
+        "wetter",
+        "more wet",
+        "wettest"
+      ],
       "correctAnswer": 1
     },
     {
       "question": "Превосходная степень 'modern':",
-      "answersList": ["modernest", "most modern", "more modern", "the modernest"],
+      "answersList": [
+        "modernest",
+        "most modern",
+        "more modern",
+        "the modernest"
+      ],
       "correctAnswer": 1
     },
     {
       "question": "Сравнительная степень 'dry':",
-      "answersList": ["dryer", "drier", "more dry", "driest"],
+      "answersList": [
+        "dryer",
+        "drier",
+        "more dry",
+        "driest"
+      ],
       "correctAnswer": 1
     },
     {
       "question": "Превосходная степень 'popular':",
-      "answersList": ["popularer", "most popular", "the most popular", "the popularest"],
+      "answersList": [
+        "popularer",
+        "most popular",
+        "the most popular",
+        "the popularest"
+      ],
       "correctAnswer": 2
     },
     {
       "question": "Выберите правильное: 'He is ... than me.'",
-      "answersList": ["younger", "more young", "youngest", "the younger"],
+      "answersList": [
+        "younger",
+        "more young",
+        "youngest",
+        "the younger"
+      ],
       "correctAnswer": 0
     },
     {
       "question": "Сравнительная степень 'fat':",
-      "answersList": ["fater", "fatter", "fattest", "more fat"],
+      "answersList": [
+        "fater",
+        "fatter",
+        "fattest",
+        "more fat"
+      ],
       "correctAnswer": 1
     },
     {
       "question": "Превосходная степень 'comfortable':",
-      "answersList": ["comfortabler", "most comfortable", "the most comfortable", "comfortableest"],
+      "answersList": [
+        "comfortabler",
+        "most comfortable",
+        "the most comfortable",
+        "comfortableest"
+      ],
       "correctAnswer": 2
     },
     {
       "question": "Сравнительная степень 'friendly':",
-      "answersList": ["friendlier", "more friendly", "both are correct", "friendliest"],
+      "answersList": [
+        "friendlier",
+        "more friendly",
+        "both are correct",
+        "friendliest"
+      ],
       "correctAnswer": 2
     },
     {
       "question": "Превосходная степень 'gentle':",
-      "answersList": ["gentlest", "most gentle", "both are correct", "gentler"],
+      "answersList": [
+        "gentlest",
+        "most gentle",
+        "both are correct",
+        "gentler"
+      ],
       "correctAnswer": 2
     },
     {
       "question": "Сравнительная степень 'brave':",
-      "answersList": ["braver", "more brave", "braveier", "bravest"],
+      "answersList": [
+        "braver",
+        "more brave",
+        "braveier",
+        "bravest"
+      ],
       "correctAnswer": 0
     },
     {
       "question": "Превосходная степень 'dangerous':",
-      "answersList": ["the most dangerous", "dangeroustest", "more dangerous", "most danger"],
+      "answersList": [
+        "the most dangerous",
+        "dangeroustest",
+        "more dangerous",
+        "most danger"
+      ],
       "correctAnswer": 0
     },
     {
       "question": "Сравнительная степень 'low':",
-      "answersList": ["lower", "more low", "lowwer", "lowest"],
+      "answersList": [
+        "lower",
+        "more low",
+        "lowwer",
+        "lowest"
+      ],
       "correctAnswer": 0
     },
     {
       "question": "Превосходная степень 'large':",
-      "answersList": ["largest", "largeest", "the most large", "larger"],
+      "answersList": [
+        "largest",
+        "largeest",
+        "the most large",
+        "larger"
+      ],
       "correctAnswer": 0
     },
     {
       "question": "Сравнительная степень 'sad':",
-      "answersList": ["sader", "sadder", "more sad", "saddest"],
+      "answersList": [
+        "sader",
+        "sadder",
+        "more sad",
+        "saddest"
+      ],
       "correctAnswer": 1
     },
     {
       "question": "Превосходная степень 'busy':",
-      "answersList": ["busier", "busyest", "the busiest", "most busy"],
+      "answersList": [
+        "busier",
+        "busyest",
+        "the busiest",
+        "most busy"
+      ],
       "correctAnswer": 2
     },
     {
       "question": "Выберите вариант для 'beautiful':",
-      "answersList": ["beautifuler", "more beautiful", "most beautiful", "the beautifulest"],
+      "answersList": [
+        "beautifuler",
+        "more beautiful",
+        "most beautiful",
+        "the beautifulest"
+      ],
       "correctAnswer": 1
     },
     {
       "question": "Сравнительная степень 'tall':",
-      "answersList": ["taller", "more tall", "the tallest", "tallerest"],
+      "answersList": [
+        "taller",
+        "more tall",
+        "the tallest",
+        "tallerest"
+      ],
       "correctAnswer": 0
     },
     {
       "question": "Превосходная степень 'little' (в значении размера):",
-      "answersList": ["least", "smallest", "littlest", "less"],
+      "answersList": [
+        "least",
+        "smallest",
+        "littlest",
+        "less"
+      ],
       "correctAnswer": 1
     },
     {
       "question": "Закончите фразу: 'The more you study, the ... you become.'",
-      "answersList": ["smart", "smartest", "smarter", "more smart"],
+      "answersList": [
+        "smart",
+        "smartest",
+        "smarter",
+        "more smart"
+      ],
       "correctAnswer": 2
     }
   ]
